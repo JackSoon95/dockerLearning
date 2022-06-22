@@ -312,6 +312,7 @@ docker push name:tag
 
 ![image](https://user-images.githubusercontent.com/97860551/174945705-6fd55c43-d104-47f5-84cd-77b98c380c2f.png)
 ip addr --> found docker0
+
 ![image](https://user-images.githubusercontent.com/97860551/175033090-a0a72fdc-ce7b-4e92-996c-63c3ff2008f6.png)
 
 
@@ -364,13 +365,13 @@ ip addr --> found docker0
 
 ![image](https://user-images.githubusercontent.com/97860551/175041602-aeb6ea44-2d1d-46fd-b1ed-e2ee5e36df2d.png)
 
-![image-20220622215743599](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622215743599.png)
+![](images/image-20220622215743599.png)
 
 ```dockerfile
 docker network create --driver bridge --subnet 192.168.150.0/24 --gateway 192.168.150.1 mynet
 ```
 
-![image-20220622215821163](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622215821163.png)
+![](images/image-20220622215821163.png)
 
 ```dockerfile
 docker run -d --name tomcat01 --net mynet tomcat
@@ -379,7 +380,7 @@ docker exec -it tomcat01 ping tomcat02 #OK!!!
 docker exec -it tomcat02 ping tomcat01 #OK!!!
 ```
 
-![image-20220622222149461](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622222149461.png)
+![](images/image-20220622222149461.png)
 
 
 
@@ -387,7 +388,7 @@ docker exec -it tomcat02 ping tomcat01 #OK!!!
 
 
 
-![image-20220622224454752](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622224454752.png)
+![](images/image-20220622224454752.png)
 
 ```dockerfile
 docker network connect [OPTIONS] NETWORK CONTAINER
@@ -468,17 +469,19 @@ redis-cli -c 		#-c stands for cluster
 
 ## Exercise - SpringBoot Project Image
 
-![image-20220622234151785](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622234151785.png)
+![](images/image-20220622234151785.png)
 
 Package
 
-![image-20220622234444372](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622234444372.png)
+![](images/image-20220622234444372.png)
 
-Saw my jar![image-20220622234450012](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622234450012.png)
+Saw my jar
+
+![](images/image-20220622234450012.png)
 
 create Dockerfile & copy out jar from target
 
-![image-20220622234837285](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220622234837285.png)
+![](images/image-20220622234837285.png)
 
 ```
 FROM java:8
@@ -504,7 +507,7 @@ run
 
 curl localhost:port/test/hello
 
-![image-20220623000322582](C:\Users\topsa\AppData\Roaming\Typora\typora-user-images\image-20220623000322582.png)
+![](images/image-20220623000322582.png)
 
 succeed!
 
