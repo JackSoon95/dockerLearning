@@ -14,6 +14,26 @@ Total video length : 8h 11m 41s
 
 Environment: Linux
 
+# What is Docker
+
+Use for DevOps. to avoid situation :
+
+person A : installed different environment and do coding
+
+person B : installed different environment
+
+a project works on A's computer but doesn't works on B's computer
+
+.
+
+.
+
+Docker to solve as it is a image which store alot of layers of required software including the environment.
+
+May including : mysql, redis, elastic search ....
+
+In future, not handing jar --> handing docker image.
+
 # Important Step for Docker:
 
 DockerFile : Generate image from layer by layer of software.
